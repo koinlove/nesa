@@ -1,5 +1,7 @@
 ## 먼저
-[여기서](https://coinboard.tistory.com/m/93) 하라는 거 다 하고 오신 거 맞죠?
+[여기서](https://coinboard.tistory.com/m/93) 노드 세팅 사전 작업 1~2 다 하고 오신 거 맞죠?
+
+이 스크립트를 명령어를 위한 거에용.
 
 ```bash
 [ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/byonjuk/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
