@@ -1,5 +1,5 @@
 ## 먼저
-링크!
+[여기서](https://coinboard.tistory.com/m/93) 하라는 거 다 하고 오신 거 맞죠?
 
 ```bash
 [ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/byonjuk/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
