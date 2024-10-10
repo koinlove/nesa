@@ -46,3 +46,15 @@ echo -e "당신의 node id : ${node_id}"
 입력
 
 그리고 나오는 님 노드아이디 어디다 복사해 두삼. 끝.
+
+## 지우는 방법
+
+```bash
+sudo rm /etc/apt/sources.list.d/docker.list
+sudo apt update -y
+```
+을 실행하고
+
+# 안 됨 시발. 삭제 안 된다 좆됐다 시발 꼬우면 리인스톨해애애액
+
+
