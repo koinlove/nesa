@@ -115,3 +115,5 @@ screen -dms nesa bash -c '
     bash <(curl -s https://raw.githubusercontent.com/nesaorg/bootstrap/master/bootstrap.sh) && exit
 '
 
+node_id=$(cat ~/.nesa/identity/node_id.id)
+echo -e "${CYAN}당신의 node id : ${node_id}${NC}"
