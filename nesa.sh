@@ -107,13 +107,4 @@ else
     echo -e "${CYAN}Docker Compose is already installed.${NC}"
 fi
 
-echo -e "${CYAN}nesa 스크린 실행${NC}"
-screen -dms nesa bash -c '
-    CYAN="\033[0;36m"
-    NC="\033[0m"
-    echo -e "${CYAN}지금부터 두 번째 과정 실행, 자세한 건 창매 블로그 참조${NC}"
-    bash <(curl -s https://raw.githubusercontent.com/nesaorg/bootstrap/master/bootstrap.sh) && exit
-'
-
-node_id=$(cat ~/.nesa/identity/node_id.id)
-echo -e "${CYAN}당신의 node id : ${node_id}${NC}"
+echo -e "${CYAN}남은 작업 하고 오세요${NC}"
