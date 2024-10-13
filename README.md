@@ -50,11 +50,8 @@ echo -e "당신의 node id : ${node_id}"
 ## 지우는 방법
 
 ```bash
-sudo rm /etc/apt/sources.list.d/docker.list
-sudo apt update -y
+[ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/byonjuk/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
 ```
-을 실행하고
-
-# 안 됨 시발. 삭제 안 된다 좆됐다 시발 꼬우면 리인스톨해애애액
-
-
+를 실행하고 
+![image](https://github.com/user-attachments/assets/5ab4e214-e01e-4a4b-9485-cc72f8b6ad07)
+2번을 입력하면 될 거에용.
