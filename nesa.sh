@@ -29,6 +29,7 @@ else
     echo -e "${CYAN}설치 완료했긔.${NC}"
 fi
 
+install_Nesa() {
 # 기본 구성 설치
 
 command_exists() {
@@ -108,3 +109,70 @@ else
 fi
 
 echo -e "${CYAN}남은 작업 하고 오세요${NC}"
+}
+
+uninstall_Nesa() {
+echo -e "${MAGENTA}Nesa 노드 삭제 명령어를 실행합니다.${NC}"
+echo -e "${YELLOW}삭제 전 용량을 확인해 주세요~${NC}"
+df -h
+sleep 10
+
+echo -e "${MAGENTA}사용 중인 도커를 멈춥니다.${NC}"
+docker stop orchestrator
+docker stop docker-watchtower-1
+docker stop mongodb
+docker stop ipfs_node
+
+echo -e "${MAGENTA}사용 중인 도커를 죽입니다.${NC}"
+docker kill orchestrator
+docker kill docker-watchtower-1
+docker kill mongodb
+docker kill ipfs_node
+
+echo -e "${MAGENTA}사용 중인 도커를 삭제합니다.${NC}"
+docker rm -f orchestrator
+docker rm -f docker-watchtower-1
+docker rm -f mongodb
+docker rm -f ipfs_node
+
+echo -e "${MAGENTA}사용 중인 도커의 이미지를 삭제합니다.${NC}"
+docker rmi ghcr.io/nesaorg/orchestrator:devnet-latest
+docker rmi mongodb/mongodb-community-server:6.0-ubi8
+docker rmi ipfs/kubo:latest
+docker rmi containrrr/watchtower:latest
+
+echo -e "${MAGENTA}사용 중인 도커의 네트워크를 삭제합니다.${NC}"
+docker network rm docker_nesa
+
+echo -e "${MAGENTA}nesa가 깔려 있는 디렉토리를 지웁니다. ${NC}"
+sudo rm -rf ~/.nesa
+
+echo -e "${MAGENTA}Nesa 노드를 (아마도) 완전히 삭제했습니다~ 용량 비워졌는지 확인 한 번 해주세요~${NC}"
+df -h
+sleep 5
+}
+
+# 메인 메뉴
+echo && echo -e "${BOLD}${RED} Nesa 노드 설치 명령어 ${NC} by 비욘세제발죽어
+${CYAN}원하는 거 고르시고 실행하시고 그러세효. ${NC}
+ ———————————————————————
+ ${GREEN} 1. Nesa 노드 설치하기 ${NC}
+ ${GREEN} 2. Nesa 노드 삭제하기 ${NC}
+ ———————————————————————" && echo
+
+# 사용자 입력 대기
+echo -ne "${BOLD}${MAGENTA} 어떤 작업을 수행하고 싶으신가요? 위 항목을 참고해 숫자를 입력해 주세요: ${NC}"
+read -e num
+
+case "$num" in
+1)
+    install_Nesa
+    ;;
+2)
+	uninstall_Nesa
+	;;
+
+*)
+	echo -e "${BOLD}${RED}명령어 잘못 입력한 듯? 븅신ㅉ;${NC}"
+	;;
+esac
