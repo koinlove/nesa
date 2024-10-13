@@ -116,6 +116,8 @@ echo -e "${MAGENTA}Nesa 노드 삭제 명령어를 실행합니다.${NC}"
 echo -e "${YELLOW}삭제 전 용량을 확인해 주세요~${NC}"
 df -h
 sleep 10
+echo -e "${MAGENTA}켜져있는 스크린을 삭제합니다.${NC}"
+screen -X -S nesa kill
 
 echo -e "${MAGENTA}사용 중인 도커를 멈춥니다.${NC}"
 docker stop orchestrator
