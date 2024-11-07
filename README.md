@@ -4,7 +4,7 @@
 이 스크립트를 명령어를 위한 거에용.
 
 ```bash
-[ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/byonjuk/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
+[ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/koinlove/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
 ```
 
 입력
@@ -50,7 +50,7 @@ echo -e "당신의 node id : ${node_id}"
 ## 지우는 방법
 
 ```bash
-[ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/byonjuk/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
+[ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/koinlove/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
 ```
 를 실행하고 
 ![image](https://github.com/user-attachments/assets/5ab4e214-e01e-4a4b-9485-cc72f8b6ad07)
