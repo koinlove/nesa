@@ -53,5 +53,5 @@ echo -e "당신의 node id : ${node_id}"
 [ -f "nesa.sh" ] && rm nesa.sh; wget -q https://raw.githubusercontent.com/koinlove/nesa/main/nesa.sh && chmod +x nesa.sh && ./nesa.sh
 ```
 를 실행하고 
-![image](https://github.com/user-attachments/assets/5ab4e214-e01e-4a4b-9485-cc72f8b6ad07)
+![image](https://github.com/user-attachments/assets/cd37afbb-5508-4e77-8bba-acaee68bc52e)
 2번을 입력하면 될 거에용.
