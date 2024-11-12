@@ -155,7 +155,7 @@ sleep 5
 }
 
 # 메인 메뉴
-echo && echo -e "${BOLD}${RED}Nesa 노드 설치 명령어 ${NC} by 비욘세제발죽어
+echo && echo -e "${BOLD}${RED}Nesa 노드 설치 명령어 ${NC} by 코인러브미순
 ${CYAN}원하는 거 고르시고 실행하시고 그러세효. ${NC}
  ———————————————————————
  ${GREEN} 1. Nesa 노드 설치하기 ${NC}
